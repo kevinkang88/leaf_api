@@ -10,8 +10,11 @@ gem 'spring', :group => :development
 
 gem 'sqlite3'
 
+gem 'dotenv', '~> 2.0.1'
 
+gem 'soundcloud', '~> 0.3.2'
 
+gem 'sidekiq'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
