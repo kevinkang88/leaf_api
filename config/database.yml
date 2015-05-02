@@ -22,6 +22,7 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: leaf_api_production
   username: admin
   password: <%= ENV['DB_PASS'] %>
