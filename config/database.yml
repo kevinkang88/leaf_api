@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: leaf_api_production
+  username: admin
+  password: <%= ENV['DB_PASS'] %>
