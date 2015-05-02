@@ -52,6 +52,7 @@ GEM
     minitest (5.6.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -106,6 +107,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv (~> 2.0.1)
+  pg
   rails (= 4.1.7)
   rails-api
   sidekiq
