@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope '/api' do
     # match "leaf_api/assign_key" => "leaf_api#assign_key", via: :options  
-    match 'leaf_api/assign_key', to: 'leaf_api#assign_key', as: 'assign_key',via: :options
+    get 'leaf_api/assign_key', to: 'leaf_api#assign_key', as: 'assign_key'
     get 'soundcloud/search', to: 'soundcloud#search', as: 'search'
   end
   # The priority is based upon order of creation: first created -> highest priority.
