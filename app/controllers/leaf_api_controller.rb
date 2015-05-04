@@ -15,11 +15,11 @@ class LeafApiController < ApplicationController
       headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
       headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Token'
       headers['Access-Control-Max-Age'] = '1728000'
-
+      headers['Access-Control-Allow-Origin'] = 'http://localhost:8100'
       render :text => '', :content_type => 'text/plain'
     end
   end
-  
+
   def assign_key 
     @key = ApiKey.create!
     render json: @key.access_token
