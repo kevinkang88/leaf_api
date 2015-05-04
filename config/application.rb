@@ -19,5 +19,14 @@ module Leafmusicapi
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.middleware.use Rack::Cors do
+      allow do
+        origins 'http://localhost:8100'
+        resource %r{/pokemon/\d+/comments/\d+},
+          :headers => ['Origin', 'Accept', 'Content-Type'],
+          :methods => [:get]
+      end
+    end
+
   end
 end

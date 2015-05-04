@@ -54,6 +54,7 @@ GEM
     multipart-post (2.0.0)
     pg (0.17.1)
     rack (1.5.2)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.7)
@@ -113,6 +114,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv (~> 2.0.1)
   pg
+  rack-cors
   rails (= 4.1.7)
   rails-api
   rails_12factor
