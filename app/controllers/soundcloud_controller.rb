@@ -3,7 +3,7 @@ class SoundcloudController < ApplicationController
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   # http_basic_authenticate_with name: 'admin', password: 'secret'
-  before_filter :restrict_access, :cors_preflight_check
+  before_filter :cors_preflight_check
 
   def search
     client = SoundCloud.new(:client_id => ENV['SC_CLIENT_ID'])
