@@ -7,8 +7,8 @@ class SoundcloudController < ApplicationController
 
   def search
     p "*" * 300
-    p params["data"]
-    query =  params["data"]
+    p params["params"]["data"]
+    query =  params["params"]["data"]
     p "*" * 300
     client = SoundCloud.new(:client_id => ENV['SC_CLIENT_ID'])
     @tracks = client.get('/tracks', :q => query,:track_type => 'original')
