@@ -6,6 +6,9 @@ class SoundcloudController < ApplicationController
   before_filter :cors_preflight_check
 
   def search
+    p "*" * 300
+    p params
+    p "*" * 300
     client = SoundCloud.new(:client_id => ENV['SC_CLIENT_ID'])
     @tracks = client.get('/tracks', :q => 'buskers',:track_type => 'original')
     render json: @tracks
